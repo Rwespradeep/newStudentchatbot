@@ -1,7 +1,10 @@
 /* * {
   overflow-x: hidden;
 } */
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+}
 body {
   background-color: #0f111a;
 }
@@ -13,6 +16,7 @@ body {
   height: 100vh;
   width: 100vw;
 }
+
 .react-chatbot-kit-user-avatar-container {
   width: 30px;
   height: 30px;
@@ -32,6 +36,29 @@ body {
   height: 424px;
 }
 
+.react-chatbot-kit-chat-header {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.react-chatbot-kit-chat-bot-message,
+.react-chatbot-kit-user-chat-message {
+  font-size: 0.8rem;
+}
+
+.react-chatbot-kit-chat-container {
+  width: 35rem !important;
+  height: 100vh;
+  position: absolute;
+  top: 8rem;
+}
+.react-chatbot-kit-chat-input-container {
+  position: relative !important;
+}
+
+.DatePicker_dateDayItem__Cqzqz {
+  font-size: 8px !important;
+  padding: 5px;
+}
 .time-header {
   color: black;
   font-size: 20px;
@@ -83,6 +110,7 @@ body {
   flex-direction: column;
   gap: 10px;
   margin-left: 15px;
+  margin-bottom: 15px;
 }
 
 .courses-btn {
@@ -99,4 +127,38 @@ body {
 }
 .DatePicker_button__qGviS {
   background-color: rgb(55, 107, 126);
+}
+
+.home-section {
+  display: flex;
+}
+
+.home-image-div {
+  flex: 1;
+}
+
+.home-image {
+  position: relative;
+  top: 14rem;
+  left: -5rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40rem;
+}
+
+.chat-section {
+  flex: 1;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  color: #2e6cb5;
+  position: absolute;
+  top: 10rem;
+  left: 15rem;
+}
+
+.greet-text {
+  margin-top: -40px;
 }

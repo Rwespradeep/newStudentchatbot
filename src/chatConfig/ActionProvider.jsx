@@ -11,8 +11,14 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     }));
   };
   //fetching our date and time from context
-  const { selectedDay, selectedTime, selectedSlot, setSelectedSlot } =
-    SlotState();
+  const {
+    selectedDay,
+    selectedTime,
+    selectedSlot,
+    setSelectedSlot,
+    course,
+    selectedCourse,
+  } = SlotState();
   useEffect(() => {
     setSelectedSlot(selectedDay + selectedTime);
   }, [selectedDay, selectedTime, selectedSlot]);
@@ -55,8 +61,19 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     );
     updateState(message);
   };
-  const pickCourse = () => {
-    const message = createChatBotMessage(`Your course is: Maths`);
+  const pickCourse = async () => {
+    let message = createChatBotMessage(
+      `You selected a slot for : ${course} course`
+    );
+
+    updateState(message);
+
+    await new Promise((resolve) => {
+      setTimeout(resolve, 2000);
+    });
+    message = createChatBotMessage(
+      `Thank you for picking up a course with us..`
+    );
     updateState(message);
   };
   return (
@@ -69,6 +86,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
             pickindDateAction,
             pickTime,
             bookedSlot,
+            pickCourse,
           },
         });
       })}

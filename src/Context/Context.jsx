@@ -9,6 +9,8 @@ export function SlotContextProvider({ children }) {
   const [selectedDay, setSelectedDay] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
 
+  const [course, selectedCourse] = useState(null);
+
   return (
     <SlotContext.Provider
       value={{
@@ -18,6 +20,8 @@ export function SlotContextProvider({ children }) {
         setSelectedDay,
         selectedTime,
         setSelectedTime,
+        course,
+        selectedCourse,
       }}
     >
       {children}

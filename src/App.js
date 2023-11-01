@@ -1,18 +1,14 @@
 import './App.css';
-import Chatbot from 'react-chatbot-kit'
-import 'react-chatbot-kit/build/main.css'
-import config from './chatConfig/config';
-import MessageParser from './chatConfig/MessageParser';
-import ActionProvider from './chatConfig/ActionProvider';
+import Home from './components/Home';
 
 function App() {
   return (
     <div className="App">
-      <Chatbot
-        config={config}
-        messageParser={MessageParser}
-        actionProvider={ActionProvider}
-      />
+      <div className='title'>
+        <h1 className='welcome-text'>Welcome</h1><br />
+        <h3 className='greet-text'>To student chat bot system</h3>
+      </div>
+      <Home />
     </div>
   );
 }
